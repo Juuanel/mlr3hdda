@@ -14,7 +14,7 @@
     \item{scaling}{TRUE or FALSE (default).}
   }
   Other arguments of hdda() (such as com_dim, cv.dim, cv.threshold, cv.vfold or noise.ctrl) are not supported by this learner, and thus always take their default values.
-  Please refer to HDclassif::hdda for more details.      
+  Please refer to HDclassif::hdda for more details.
 }
 \author{Juanel WALOP}
 \examples{
