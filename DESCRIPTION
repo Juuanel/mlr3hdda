@@ -1,0 +1,14 @@
+Package: mlr3hdda
+Type: Package
+Title: 'mlr3' High Dimensional Discriminant Analysis Learner
+Version: 2026.11.28
+Authors@R: c(
+    person("Juanel", "WALOP",
+     email="walj3890@usherbrooke.ca",
+     role=c("aut", "cre")))
+Description: Provides an 'mlr3' classification Learner which wraps the hdda() function of the 'HDclassif' package.
+License: GPL-3
+Encoding: UTF-8
+URL: https://github.com/Juuanel/mlr3hdda
+Imports: mlr3, R6, HDclassif, paradox, mlr3misc, stats
+Suggests: testthat
