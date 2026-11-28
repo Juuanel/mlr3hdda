@@ -38,15 +38,14 @@ LearnerClassifHDDA = R6Class("LearnerClassifHDDA",
   private = list(
     .train = function(task) {
       pv = self$param_set$get_values(tags = "train")
-      data = as.data.frame(task$data(cols = task$feature_names))
+      data = as.matrix(task$data(cols = task$feature_names))
       target = task$truth()
 
       invoke(HDclassif::hdda, data = data, cls = target, show = FALSE, .args = pv)
     },
 
     .predict = function(task) {
-      feats = self$state$train_task$feature_names
-      newdata = as.data.frame(task$data(cols = feats))
+      newdata = task$data(cols = task$feature_names)
 
       pred = predict(self$model, newdata)
 
