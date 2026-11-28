@@ -45,8 +45,8 @@ LearnerClassifHDDA = R6Class("LearnerClassifHDDA",
     },
 
     .predict = function(task) {
-      newdata = task$data(cols = task$feature_names)
-
+      newdata = as.matrix(task$data(cols = task$feature_names))
+      
       pred = predict(self$model, newdata)
 
       levs = task$class_names
